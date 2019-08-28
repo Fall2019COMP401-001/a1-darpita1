@@ -23,7 +23,7 @@ public class A1Novice {
 				double price = scan.nextDouble();
 				sum += (price * count);
 			}
-			System.out.println(f.substring(0,1) + '.' + l + ':' + new DecimalFormat("$#,##0.00").format(sum));
+			System.out.println(f.substring(0,1) + '.' + l + ':' + new DecimalFormat("#,##0.00").format(sum));
 
 		}
 	}
