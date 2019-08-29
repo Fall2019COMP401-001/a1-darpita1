@@ -1,5 +1,6 @@
 package a1;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class A1Adept {
@@ -53,8 +54,8 @@ public class A1Adept {
 		}
 	int minindx = findValueMinIndx(totalprices);
 	int maxindx = findValueMaxIndx(totalprices);	
-	System.out.println("Biggest: " + firstnames[maxindx] + " " + lastnames[maxindx] + " (" + totalprices[maxindx] + ")");
-	System.out.println("Smallest: " + firstnames[minindx] + " " + lastnames[minindx] + " (" + totalprices[minindx] + ")");
+	System.out.println("Biggest: " + firstnames[maxindx] + " " + lastnames[maxindx] + " (" +  new DecimalFormat("#,##0.00").format(totalprices[maxindx]) + ")");
+	System.out.println("Smallest: " + firstnames[minindx] + " " + lastnames[minindx] + " (" + new DecimalFormat("#,##0.00").format(totalprices[minindx]) + ")");
 	System.out.println("Average: " + String.format("%.2f", Average(totalprices)));
 	}
 	static int findValueMinIndx(Double[] vals) {
