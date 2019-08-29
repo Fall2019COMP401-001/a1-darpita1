@@ -67,8 +67,8 @@ public class A1Adept {
 		// Starting with second value (if any), compare each value
 		// in array with current minimum and replace if smaller.
 
-		for (int i=1; i < vals.length; i++) {
-			if (vals[i] < cur_min) {
+		for (int i=0; i < vals.length; i++) {
+			if (vals[i] <= cur_min) {
 				cur_min = vals[i];
 				cur_min_indx = i;
 			}
@@ -87,8 +87,8 @@ public class A1Adept {
 		// Starting with second value (if any), compare each value
 		// in array with current minimum and replace if smaller.
 
-		for (int i=1; i < vals.length; i++) {
-			if (vals[i] > cur_max) {
+		for (int i=0; i < vals.length; i++) {
+			if (vals[i] >= cur_max) {
 				cur_max = vals[i];
 				cur_max_indx = i;
 			}
