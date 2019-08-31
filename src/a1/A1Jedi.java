@@ -33,15 +33,17 @@ public class A1Jedi {
 				for (int i = 0; i < itembank.length; i++) {
 					if (itembank[i].equals(itemname)) {
 						countofitem[i] += numofitem;
-						countofcustomer[i] += 1;
+						if (countofcustomer[i] <= j) {
+							countofcustomer[i] += 1;
+						}
 					}
-	
+					
 				}
 					
 			}
 		}
 		for (int x=0; x < itembank.length; x++) {
-			if (countofitem[x] == 0) {
+			if (countofcustomer[x] == 0) {
 				System.out.println("No customers bought " + itembank[x]);
 			}
 			else {
