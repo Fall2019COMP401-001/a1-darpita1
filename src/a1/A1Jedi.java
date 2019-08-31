@@ -23,21 +23,22 @@ public class A1Jedi {
 		//String[] lastnames = new String[customers];
 		int[] countofitem = new int[itembank.length];
 		int[] countofcustomer = new int[itembank.length];
-		for (int j=0; j<customers; j++) {
+		for (int j=0; j<customers; j++) {   // j < 3
 			String firstname = scan.next();
 			String lastname = scan.next();
+			String holder = firstname;
 			int itemsbought = scan.nextInt();
-			for (int k=0; k < itemsbought; k++) {
+			for (int k=0; k < itemsbought; k++) {     // k < diff numbers per customer
 				int numofitem = scan.nextInt();
 				String itemname = scan.next();
-				for (int i = 0; i < itembank.length; i++) {
+				for (int i = 0; i < itembank.length; i++) {  // i < 6
 					if (itembank[i].equals(itemname)) {
 						countofitem[i] += numofitem;
-						if (countofcustomer[i] <= j) {
+						if (holder.contains(itemname) == false) {
+							holder = holder + itemname;
 							countofcustomer[i] += 1;
 						}
 					}
-					
 				}
 					
 			}
